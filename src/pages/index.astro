@@ -1,0 +1,136 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QrGenerator from '../components/QrGenerator.jsx';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Free Online QR Code Generator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Generate custom QR codes for URLs, Text, Wi-Fi, and vCards for free. Download as PNG or SVG with logo support."
+};
+---
+
+<Layout 
+  title="Free Custom QR Code Generator Online - URL, Wi-Fi, Logo"
+  description="Create custom QR codes instantly. 100% free online QR code maker. Generate QR codes for URLs, Wi-Fi, Text, and vCards. Add your logo and download as PNG or SVG."
+>
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-semibold mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        100% Private & Secure - Local Processing
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+        Free Custom QR Code Generator
+      </h1>
+      <p class="text-lg text-slate-600">
+        Create high-quality QR codes in seconds. Customize colors, add your logo, and download in PNG or SVG format. No sign-up required.
+      </p>
+    </div>
+
+    <!-- React App Island -->
+    <QrGenerator client:load />
+
+    <!-- Value Proposition & SEO Content -->
+    <div class="mt-24 max-w-4xl mx-auto space-y-16">
+      
+      <section>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">How to Create a QR Code for Free</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+            <h3 class="font-semibold text-lg text-slate-900 mb-2">Choose Type</h3>
+            <p class="text-slate-600 text-sm">Select whether you want to link to a website URL, share text, connect to Wi-Fi, or share contact info.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+            <h3 class="font-semibold text-lg text-slate-900 mb-2">Customize</h3>
+            <p class="text-slate-600 text-sm">Personalize your QR code by changing the colors to match your brand and uploading your own logo.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+            <h3 class="font-semibold text-lg text-slate-900 mb-2">Download</h3>
+            <p class="text-slate-600 text-sm">Preview your design instantly and download a high-resolution PNG or vector SVG file.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Supported QR Code Types</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-semibold text-lg text-slate-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-indigo-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+              URL / Link & UTM
+            </h3>
+            <p class="text-slate-600 mt-1">Direct users instantly to your website or marketing campaign with built-in UTM tracking support.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-slate-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-indigo-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg>
+              Wi-Fi Network
+            </h3>
+            <p class="text-slate-600 mt-1">Let guests connect to your wireless network without typing a long password. Just scan and join.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-slate-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-indigo-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
+              vCard (Virtual Contact)
+            </h3>
+            <p class="text-slate-600 mt-1">Share your contact information digitally. Scanning the code prompts the user to add your details to their address book.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-slate-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-indigo-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+              WhatsApp
+            </h3>
+            <p class="text-slate-600 mt-1">Create a direct link that opens a WhatsApp chat with a pre-filled message, perfect for customer support.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-slate-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-indigo-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              Email
+            </h3>
+            <p class="text-slate-600 mt-1">Launch the user's default email client with a pre-filled recipient, subject line, and body text.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-slate-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-indigo-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              Crypto Wallet
+            </h3>
+            <p class="text-slate-600 mt-1">Securely share your Bitcoin, Ethereum, or Litecoin public address to receive payments effortlessly.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4 max-w-3xl mx-auto">
+          <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+            <h3 class="font-semibold text-lg text-slate-900">Do these QR codes expire?</h3>
+            <p class="text-slate-600 mt-2">No! The QR codes generated here are completely static. The data is encoded directly into the image pattern itself, meaning they will work forever and never expire.</p>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+            <h3 class="font-semibold text-lg text-slate-900">Is this tool really 100% private?</h3>
+            <p class="text-slate-600 mt-2">Yes. We do not store your data, links, or generated images on any server. Everything is processed locally right inside your web browser for maximum privacy and security.</p>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
+            <h3 class="font-semibold text-lg text-slate-900">What is the best format to download, PNG or SVG?</h3>
+            <p class="text-slate-600 mt-2">PNG is a high-resolution raster image that is perfect for web use, emails, and general sharing. SVG is a vector format that can be scaled infinitely without losing quality, making it ideal for professional printing (flyers, banners, merchandise).</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Layout>
